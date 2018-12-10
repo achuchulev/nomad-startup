@@ -125,7 +125,7 @@ nomad job run example.nomad
 nomad status example
 ```
 
-## Access Nomad Web UI and inspect Nomad Jobs
+#### Access Nomad Web UI and inspect Nomad Jobs
 
 Go to [http://localhost:4646](http://localhost:4646)
 
