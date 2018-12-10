@@ -39,7 +39,7 @@ This mode is used to quickly start an agent that is acting as a client and serve
 sudo nomad agent -dev
 ```
 
-### List Nomad cluster nodes
+#### List Nomad cluster nodes
 
 Open new SSH session to vagrant box and see the registered nodes of the Nomad cluster and view the Nomad members
 
@@ -49,7 +49,7 @@ nomad node status
 nomad server members
 ```
 
-### Create a sample Nomad Job
+#### Create a sample Nomad Job
 
 ```
 nomad job init
@@ -57,19 +57,19 @@ nomad job init
 
 which generates a skeleton job file named `which generates a skeleton job file`
 
-### Run a Nomad Job
+#### Run a Nomad Job
 
 ```
 nomad job run example.nomad
 ```
 
-### Inspect the status of the job
+#### Inspect the status of the job
 
 ```
 nomad status example
 ```
 
-### Modify a Job
+#### Modify a Job
 
 Edit the example.nomad file to update the count and set it to 3:
 
@@ -79,37 +79,38 @@ Edit the example.nomad file to update the count and set it to 3:
 # to 1.
 count = 3
 ```
-### Dry-run of the scheduler 
+#### Dry-run of the scheduler 
 
 ```
 nomad job plan example.nomad
 ```
 
-### Push the updated job specification
+#### Push the updated job specification
 
 ```
 nomad job run example.nomad
 ```
 
-### Stop a Job
+#### Stop a Job
 
 ```
 nomad job stop example
 ```
 
-### Stop Nomad Dev mode
+#### Stop Nomad Dev mode
 
 You can use `Ctrl-C` (the interrupt signal) to halt the agent
 
+
 ## Setup Nomad cluster
 
-### Start Nomad agent in server mode
+#### Start Nomad agent in server mode
 
 ```
 nomad agent -config config/server.hcl
 ```
 
-### Start Nomad Clients
+#### Start Nomad Clients
 
 ```
 sudo nomad agent -config config/client1.hcl
@@ -117,15 +118,14 @@ sudo nomad agent -config config/client2.hcl
 nomad node status
 ```
 
-### Submit a Job
-
+#### Submit a Job
 
 ```
 nomad job run example.nomad
 nomad status example
 ```
 
-## Access Nomad Web UI and inspect Nomad Jobs
+### Access Nomad Web UI and inspect Nomad Jobs
 
 Go to [http://localhost:4646](http://localhost:4646)
 
