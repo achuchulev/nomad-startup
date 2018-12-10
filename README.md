@@ -31,7 +31,7 @@ vagrant ssh
 nomad
 ```
 
-### Run a single Nomad agent in development mode
+## Run a single Nomad agent in development mode
 
 This mode is used to quickly start an agent that is acting as a client and server to test job configurations or prototype interactions. It should not be used in production as it does not persist state.
 
